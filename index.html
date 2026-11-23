@@ -1,341 +1,363 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop All - Wallips Glam</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wallips Glam — Official Store</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #ffffff;
+      color: #111111;
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+<body class="antialiased overflow-x-hidden">
 
-    <div class="bg-[#e0218a] text-white text-[10px] py-3 uppercase tracking-[0.15em] font-semibold">
-        <marquee behavior="scroll" direction="left" scrollamount="5">
-            LIVRAISON GRATUITE EN CÔTE D'IVOIRE DÈS 30 000 FCFA • LIVRAISON GRATUITE EN CÔTE D'IVOIRE DÈS 30 000 FCFA • LIVRAISON GRATUITE EN CÔTE D'IVOIRE DÈS 30 000 FCFA
-        </marquee>
-    </div>
+  <!-- 1. Bandeau d'annonce noir -->
+  <div class="bg-black text-white text-[10px] md:text-xs py-2 px-4 text-center tracking-widest uppercase">
+    Livraison rapide à Abidjan &amp; en Côte d'Ivoire • Paiement Wave disponible
+  </div>
 
-    <header class="bg-white border-b border-gray-100 sticky top-0 z-40">
-        <div class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-3 items-center">
-            
+  <!-- 2. En-tête épuré -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
+      <div class="w-10"></div>
 
-           <div class="text-center flex justify-center">
-    <img src="Logo" alt="Wallips Glam" class="h-10 object-contain">
-</div>
+      <a href="#" class="flex items-center justify-center">
+        <img src="LOGO.png" alt="Wallips Glam" class="h-10 md:h-12 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <span class="hidden text-lg md:text-xl font-bold tracking-[0.22em] uppercase">Wallips Glam</span>
+      </a>
 
-
-                <div class="flex items-center justify-end pr-1">
-        <button onclick="toggleCart()" class="relative text-gray-800 focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
-            </svg>
-            <span id="cart-count" class="absolute -top-1 -right-1 bg-pink-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+      <div class="flex items-center justify-end w-10">
+        <button onclick="toggleCart()" class="relative text-gray-900 hover:opacity-75 transition focus:outline-none" aria-label="Panier">
+          <i class="fa-solid fa-bag-shopping text-lg"></i>
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-black text-white text-[9px] rounded-full w-4 h-4 flex items-center justify-center font-bold">0</span>
         </button>
+      </div>
     </div>
-</header>
+  </header>
 
-    <section class="max-w-3xl mx-auto px-6 pt-12 pb-8 text-left">
-        <h1 class="text-3xl md:text-4xl font-normal text-gray-950 tracking-wide mb-6">Shop All</h1>
-        <h2 class="text-sm font-bold italic text-gray-800 mb-4 tracking-wide">Luxury, Convenient, and Style <span class="font-normal not-italic text-gray-500">All in One</span></h2>
-        <p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-4">
-            Une formule de haute qualité conçue pour offrir une hydratation intense et un confort absolu tout en aidant vos lèvres à rester douces, nourries et brillantes !
+  <!-- 3. Grand visuel d'accueil (Hero) -->
+  <section class="relative w-full bg-[#f4e8ea] overflow-hidden">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2">
+      <div class="h-64 md:h-[520px] bg-[#ead5d9] flex items-center justify-center overflow-hidden">
+        <img src="LOGO.png" alt="Wallips Glam" class="w-full h-full object-cover" />
+      </div>
+      <div class="h-64 md:h-[520px] bg-[#f7ecef] flex items-center justify-center overflow-hidden">
+        <img src="LIP1.png" alt="Wallips Gloss" class="w-full h-full object-cover" />
+      </div>
+    </div>
+
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 bg-black/10">
+
+
+      <a href="#boutique" class="bg-white text-black text-xs font-semibold uppercase tracking-widest px-7 py-3 hover:bg-black hover:text-white transition">
+        Découvrir
+      </a>
+    </div>
+  </section>
+
+  <!-- 4. Grille des 4 Gloss -->
+  <section id="boutique" class="max-w-7xl mx-auto px-4 md:px-8 py-14">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-6">
+
+      <!-- 1. Glow Pink -->
+      <div class="flex flex-col justify-between border border-gray-100 bg-white">
+        <div>
+          <div class="relative aspect-square bg-[#f7f7f7] overflow-hidden">
+            <img id="img-glow" src="GLOW PINK.png" alt="GLOW PINK.png" class="w-full h-full object-cover" />
+            <span class="absolute top-2.5 left-2.5 bg-black text-white text-[10px] font-semibold px-2 py-0.5">-14%</span>
+          </div>
+          <div class="p-3">
+            <h3 class="text-xs font-medium text-gray-900 mb-1">Glow Pink</h3>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-semibold text-gray-900">6 000 FCFA</span>
+              <span class="text-[11px] text-red-500 line-through">7 000 FCFA</span>
+            </div>
+          </div>
+        </div>
+        <div class="px-3 pb-3">
+          <button onclick="addToCart('Glow Pink', 6000, document.getElementById('img-glow').src)" class="w-full border border-gray-900 text-gray-900 hover:bg-black hover:text-white text-[11px] font-medium py-2 transition">
+            Ajouter
+          </button>
+        </div>
+      </div>
+
+      <!-- 2. Sunbeam -->
+      <div class="flex flex-col justify-between border border-gray-100 bg-white">
+        <div>
+          <div class="relative aspect-square bg-[#f7f7f7] overflow-hidden">
+            <img id="img-sunbeam" src="SUNBEAM.png" alt="Sunbeam" class="w-full h-full object-cover" />
+            <span class="absolute top-2.5 left-2.5 bg-black text-white text-[10px] font-semibold px-2 py-0.5">-14%</span>
+          </div>
+          <div class="p-3">
+            <h3 class="text-xs font-medium text-gray-900 mb-1">Sunbeam</h3>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-semibold text-gray-900">6 000 FCFA</span>
+              <span class="text-[11px] text-red-500 line-through">7 000 FCFA</span>
+            </div>
+          </div>
+        </div>
+        <div class="px-3 pb-3">
+          <button onclick="addToCart('Sunbeam', 6000, document.getElementById('img-sunbeam').src)" class="w-full border border-gray-900 text-gray-900 hover:bg-black hover:text-white text-[11px] font-medium py-2 transition">
+            Ajouter
+          </button>
+        </div>
+      </div>
+
+      <!-- 3. Sky Drip -->
+      <div class="flex flex-col justify-between border border-gray-100 bg-white">
+        <div>
+          <div class="relative aspect-square bg-[#f7f7f7] overflow-hidden">
+            <img id="img-skydrip" src="SKY DRIP.png" alt="Sky Drip" class="w-full h-full object-cover" />
+            <span  class="absolute top-2.5 left-2.5 bg-black text-white text-[10px] font-semibold px-2 py-0.5">-14%</span>
+          </div>
+          <div class="p-3">
+            <h3 class="text-xs font-medium text-gray-900 mb-1">Sky Drip</h3>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-semibold text-gray-900">6 000 FCFA</span>
+              <span class="text-[11px] text-red-500 line-through">7 000 FCFA</span>
+            </div>
+          </div>
+        </div>
+        <div class="px-3 pb-3">
+          <button onclick="addToCart('Sky Drip', 6000, document.getElementById('img-skydrip').src)" class="w-full border border-gray-900 text-gray-900 hover:bg-black hover:text-white text-[11px] font-medium py-2 transition">
+            Ajouter
+          </button>
+        </div>
+      </div>
+
+      <!-- 4. Shine -->
+      <div class="flex flex-col justify-between border border-gray-100 bg-white">
+        <div>
+          <div class="relative aspect-square bg-[#f7f7f7] overflow-hidden">
+            <img id="img-shine" src="SHINE.png" alt="Shine" class="w-full h-full object-cover" />
+            <span class="absolute top-2.5 left-2.5 bg-black text-white text-[10px] font-semibold px-2 py-0.5">-14%</span>
+          </div>
+          <div class="p-3">
+            <h3 class="text-xs font-medium text-gray-900 mb-1">Shine</h3>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-semibold text-gray-900">6 000 FCFA</span>
+              <span class="text-[11px] text-red-500 line-through">7 000 FCFA</span>
+            </div>
+          </div>
+        </div>
+        <div class="px-3 pb-3">
+          <button onclick="addToCart('Shine', 6000, document.getElementById('img-shine').src)" class="w-full border border-gray-900 text-gray-900 hover:bg-black hover:text-white text-[11px] font-medium py-2 transition">
+            Ajouter
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. Bloc éditorial 1 : Visuel à gauche, texte à droite -->
+  <section class="max-w-7xl mx-auto px-4 md:px-8 py-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8 bg-[#fafafa]">
+      <div class="h-72 md:h-[420px] overflow-hidden">
+        <img src="LIP2.png" alt="Brillance et confort" class="w-full h-full object-cover" />
+      </div>
+      <div class="p-6 md:p-12">
+        <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 leading-snug mb-4">
+          Brillance. Miroir.<br />Lumière LED.
+        </h2>
+        <p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-6 max-w-md">
+          Un gloss hydratant pensé pour sublimer vos lèvres avec une lumière LED intégrée et un miroir pratique pour les retouches à tout moment.
         </p>
-        <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
-            La lumière LED intégrée est pensée pour vous permettre de vous voir même dans l'obscurité. Le tout en appliquant votre gloss à la perfection grâce au miroir intégré sur le côté du tube.
+        <a href="#boutique" class="inline-block bg-black text-white text-xs font-medium px-6 py-3 hover:opacity-85 transition">
+          Choisir ma teinte
+        </a>
+      </div>
+    </div>
+ 
+  </section>
+
+  <!-- 6. Bloc éditorial 2 : Texte à gauche, visuel à droite -->
+  <section class="max-w-7xl mx-auto px-4 md:px-8 py-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+      <div class="p-6 md:p-12 order-2 md:order-1">
+
+        <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 leading-snug mb-4">
+          Wallips Glam — l'éclat sans compromis
+        </h2>
+        <p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-6 max-w-md">
+          Une texture douce et non collante qui apporte de la brillance et de l'hydratation au quotidien, du bureau à vos soirées.
         </p>
-    </section>
-
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center border-t border-gray-100 mb-6">
-        <button class="text-xs font-semibold tracking-wider text-[#e0218a] flex items-center gap-2 hover:opacity-80">
-            <i class="fa-solid fa-sliders"></i> Filtrer et trier
-        </button>
-        <span class="text-xs text-gray-400 tracking-wider">6 produits</span>
+        <a href="#boutique" class="inline-block bg-black text-white text-xs font-medium px-6 py-3 hover:opacity-85 transition">
+          Voir la collection
+        </a>
+      </div>
+      <div class="h-72 md:h-[420px] bg-[#f7ecef] overflow-hidden order-1 md:order-2">
+        <img src="SLIME GLOSS.png" alt="Texture Wallips Gloss" class="w-full h-full object-cover" />
+      </div>
     </div>
-
-    <main class="max-w-7xl mx-auto px-4 pb-16">
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-10">
-            
-            <div class="flex flex-col justify-between">
-                <div>
-                    <div class="relative bg-gray-50 aspect-square mb-4 overflow-hidden">
-                        <img id="img-shine" src="SHINE" alt="Shine" class="w-full h-full object-cover">
-                    </div>
-                    <h3 class="text-xs font-semibold text-gray-800 tracking-wide mb-1">Shine</h3>
-                    <span class="text-xs font-medium text-gray-500 block mb-2">7 000 FCFA</span>
-                </div>
-                <button onclick="addToCart('Shine', 7000, document.getElementById('img-shine').src)" class="w-full bg-black text-white text-[10px] uppercase font-bold py-2.5 tracking-wider hover:bg-[#e0218a] transition duration-200">
-                    Ajouter au panier
-                </button>
-            </div>
-
-            <div class="flex flex-col justify-between">
-                <div>
-                    <div class="relative bg-gray-50 aspect-square mb-4 overflow-hidden">
-                        <img id="img-skydrip" src="Sky" alt="Sky Drip" class="w-full h-full object-cover">
-                    </div>
-                    <h3 class="text-xs font-semibold text-gray-800 tracking-wide mb-1">Sky Drip</h3>
-                    <span class="text-xs font-medium text-gray-500 block mb-2">7 000 FCFA</span>
-                </div>
-                <button onclick="addToCart('Sky Drip', 7000, document.getElementById('img-skydrip').src)" class="w-full bg-black text-white text-[10px] uppercase font-bold py-2.5 tracking-wider hover:bg-[#e0218a] transition duration-200">
-                    Ajouter au panier
-                </button>
-            </div>
-
-            <div class="flex flex-col justify-between">
-                <div>
-                    <div class="relative bg-gray-50 aspect-square mb-4 overflow-hidden">
-                        <img id="img-glowpink" src="Glow" alt="Glow" class="w-full h-full object-cover">
-                    </div>
-                    <h3 class="text-xs font-semibold text-gray-800 tracking-wide mb-1">Glow Pink</h3>
-                    <span class="text-xs font-medium text-gray-500 block mb-2">7 000 FCFA</span>
-                </div>
-                <button onclick="addToCart('Glow Pink', 7000, document.getElementById('img-glowpink').src)" class="w-full bg-black text-white text-[10px] uppercase font-bold py-2.5 tracking-wider hover:bg-[#e0218a] transition duration-200">
-                    Ajouter au panier
-                </button>
-            </div>
-
-            <div class="flex flex-col">
-    
-    <div class="relative bg-gray-50 aspect-square mb-2 overflow-hidden rounded-md">
-        <img src="Royal" alt="Royal Kiss" class="w-full h-full object-cover">
-        
-        <span class="absolute bottom-3 left-3 bg-[#e0218a] text-white text-[10px] font-medium px-3 py-1 rounded-full shadow-sm">
-            Sold Out
-        </span>
-    </div>
-
-   
-    <h3 class="text-xs font-medium text-gray-800 mb-1">Royal Kiss</h3>
+  </section>
 
   
-    <span class="text-xs font-normal text-red-500 line-through">7000 FCFA</span>
-</div>
 
+  <!-- 8. Pied de page -->
+  <footer class="border-t border-gray-200 bg-white pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 text-xs">
+      <div>
+        <p class="font-bold tracking-[0.2em] uppercase mb-3">Wallips Glam</p>
+        <p class="text-gray-500 leading-relaxed">
+          Gloss lumineux avec miroir et LED intégrée. Abidjan, Côte d'Ivoire.
+        </p>
+      </div>
 
-          <div class="flex flex-col">
-   
-    <div class="relative bg-gray-50 aspect-square mb-2 overflow-hidden rounded-md">
-        <img id="img-greengoddess" src="Green" alt="Green Goddess" class="w-full h-full object-cover">
+      <div>
+        <p class="font-semibold uppercase tracking-wider mb-3">Boutique</p>
+        <ul class="space-y-2 text-gray-600">
+          <li><a href="#boutique" class="hover:text-black">Les 4 gloss</a></li>
+          <li><a href="#boutique" class="hover:text-black">Offre -14%</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-semibold uppercase tracking-wider mb-3">Infos</p>
+        <ul class="space-y-2 text-gray-600">
+          <li><a href="#" onclick="toggleCart(); return false;" class="hover:text-black">Mon panier</a></li>
+          <li><a href="#boutique" class="hover:text-black">Livraison</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-semibold uppercase tracking-wider mb-3">Paiement Wave</p>
+        <p class="text-gray-500 mb-3">Commandez en quelques clics et réglez facilement via Wave ou WhatsApp.</p>
+        <button onclick="toggleCart()" class="bg-black text-white px-4 py-2 font-medium hover:opacity-85 transition">
+          Ouvrir mon panier
+        </button>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 md:px-8 mt-10 pt-6 border-t border-gray-100 text-[11px] text-gray-400 flex flex-col sm:flex-row justify-between gap-2">
+      <span>© 2025 Wallips Glam. Tous droits réservés.</span>
+      <span>Abidjan, Côte d'Ivoire</span>
+    </div>
+  </footer>
+
+  <!-- 9. Tiroir Panier -->
+  <div id="cart-drawer" class="fixed inset-0 z-50 hidden">
+    <div onclick="toggleCart()" class="fixed inset-0 bg-black/50"></div>
+    <div class="fixed right-0 top-0 h-full w-full max-w-md bg-white shadow-xl p-6 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between border-b pb-4 mb-4">
+          <h3 class="text-sm font-bold uppercase tracking-wider">Votre Panier</h3>
+          <button onclick="toggleCart()" class="text-gray-600 hover:text-black text-lg">&times;</button>
+        </div>
+
+        <div id="cart-items" class="space-y-3 mb-6 text-xs">
+          <p class="text-gray-400">Votre panier est vide.</p>
+        </div>
+
+        <div class="border-t pt-4 mb-5 flex items-center justify-between">
+          <span class="text-xs font-bold uppercase">Total :</span>
+          <span id="cart-total" class="text-base font-bold text-gray-900">0 FCFA</span>
+        </div>
+
+        <div class="space-y-3 text-xs">
+          <input id="client-name" type="text" placeholder="Nom complet" class="w-full border border-gray-300 px-3 py-2.5 focus:outline-none focus:border-black" />
+          <input id="client-zone" type="text" placeholder="Commune & quartier de livraison" class="w-full border border-gray-300 px-3 py-2.5 focus:outline-none focus:border-black" />
+        </div>
+
         
-        <span class="absolute bottom-3 left-3 bg-[#e0218a] text-white text-[10px] font-medium px-3 py-1 rounded-full shadow-sm">
-            Sold Out
-        </span>
+
+      <button onclick="sendWhatsApp()" class="mt-6 w-full bg-black text-white text-xs font-semibold uppercase tracking-wider py-3.5 hover:bg-[#e0218a] transition">
+        Confirmer sur WhatsApp
+      </button>
     </div>
+  </div>
 
-   
-    <h3 class="text-xs font-medium text-gray-800 mb-1">Green Goddess</h3>
+  <script>
+    let cart = [];
 
-   
-    <span class="text-xs font-normal text-red-500 line-through">7000 FCFA</span>
-</div>
+    function toggleCart() {
+      document.getElementById('cart-drawer').classList.toggle('hidden');
+    }
 
-            <div class="flex flex-col justify-between">
-                <div>
-                    <div class="relative bg-gray-50 aspect-square mb-4 overflow-hidden">
-                        <img id="img-sunbeam" src="Sun" alt="Sunbeam" class="w-full h-full object-cover">
-                    </div>
-                    <h3 class="text-xs font-semibold text-gray-800 tracking-wide mb-1">Sunbeam</h3>
-                    <span class="text-xs font-medium text-gray-500 block mb-2">7 000 FCFA</span>
-                </div>
-                <button onclick="addToCart('Sunbeam', 7000, document.getElementById('img-sunbeam').src)" class="w-full bg-black text-white text-[10px] uppercase font-bold py-2.5 tracking-wider hover:bg-[#e0218a] transition duration-200">
-                    Ajouter au panier
-                </button>
-            </div>
+    function addToCart(name, price, image) {
+      const existing = cart.find(item => item.name === name);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ name, price, image, qty: 1 });
+      }
+      renderCart();
+      document.getElementById('cart-drawer').classList.remove('hidden');
+    }
 
+    function updateQty(index, delta) {
+      cart[index].qty += delta;
+      if (cart[index].qty <= 0) {
+        cart.splice(index, 1);
+      }
+      renderCart();
+    }
+
+    function renderCart() {
+      const container = document.getElementById('cart-items');
+      const countEl = document.getElementById('cart-count');
+      const totalEl = document.getElementById('cart-total');
+
+      const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+      const totalPrice = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+
+      countEl.textContent = totalQty;
+      totalEl.textContent = totalPrice.toLocaleString('fr-FR') + ' FCFA';
+
+      if (cart.length === 0) {
+        container.innerHTML = '<p class="text-gray-400">Votre panier est vide.</p>';
+        return;
+      }
+
+      container.innerHTML = cart.map((item, idx) => `
+        <div class="flex items-center justify-between border-b pb-3 gap-3">
+          <img src="${item.image}" alt="${item.name}" class="w-12 h-12 object-cover bg-gray-100" />
+          <div class="flex-1">
+            <p class="font-semibold text-gray-900">${item.name}</p>
+            <p class="text-gray-500">${item.price.toLocaleString('fr-FR')} FCFA</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="updateQty(${idx}, -1)" class="px-2 py-0.5 border">-</button>
+            <span>${item.qty}</span>
+            <button onclick="updateQty(${idx}, 1)" class="px-2 py-0.5 border">+</button>
+          </div>
         </div>
-    </main>
+      `).join('');
+    }
 
-    <div id="cart-sidebar" class="fixed inset-y-0 right-0 w-full md:w-[400px] bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col border-l border-gray-100">
-        <div class="p-5 border-b border-gray-100 flex justify-between items-center">
-            <span class="font-bold tracking-wider uppercase text-sm text-black">Votre Panier</span>
-            <button onclick="toggleCart()" class="text-gray-500 hover:text-black text-xl">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-        </div>
+      function sendWhatsApp() {
+      if (cart.length === 0) {
+        alert("Votre panier est vide.");
+        return;
+      }
 
-        <div id="cart-items-list" class="flex-1 overflow-y-auto p-5 space-y-4 text-xs text-gray-500">
-            Votre panier est vide.
-        </div>
+      const name = document.getElementById('client-name').value.trim();
+      const zone = document.getElementById('client-zone').value.trim();
+      const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
 
-        <div class="p-5 border-t border-gray-100 bg-gray-50">
-            <div class="flex justify-between items-center mb-4">
-                <span class="text-xs font-bold uppercase tracking-wider text-gray-600">Total :</span>
-                <span id="cart-total" class="text-xl font-bold text-[#e0218a]">0 FCFA</span>
-            </div>
+      const lines = cart
+        .map(item => `- ${item.name} x${item.qty} (${(item.price * item.qty).toLocaleString('fr-FR')} FCFA)`)
+        .join('\n');
 
-            <form id="order-form" onsubmit="sendOrder(event)" class="space-y-3">
-                <input type="text" id="cust-name" placeholder="Nom Complet de la cliente *" required 
-                       class="w-full border border-gray-200 px-3 py-2.5 text-xs bg-white focus:outline-none focus:border-[#e0218a]">
-                
-                <input type="text" id="cust-location" placeholder="Commune & Quartier précis de livraison *" required 
-                       class="w-full border border-gray-200 px-3 py-2.5 text-xs bg-white focus:outline-none focus:border-[#e0218a]">
-                
-                <div class="grid grid-cols-2 gap-2">
-                    <div>
-                        <label class="block text-[9px] text-gray-400 uppercase mb-1">Date de livraison *</label>
-                        <input type="date" id="cust-date" required 
-                               class="w-full border border-gray-200 px-3 py-2 text-xs bg-white focus:outline-none focus:border-[#e0218a]">
-                    </div>
-                    <div>
-                        <label class="block text-[9px] text-gray-400 uppercase mb-1">Heure souhaitée *</label>
-                        <input type="time" id="cust-time" required 
-                               class="w-full border border-gray-200 px-3 py-2 text-xs bg-white focus:outline-none focus:border-[#e0218a]">
-                    </div>
-                </div>
+      const message =
+        `Bonjour Wallips Glam, je souhaite commander :\n` +
+        `${lines}\n` +
+        `Total : ${total.toLocaleString('fr-FR')} FCFA\n` +
+        `Nom : ${name || 'Non précisé'}\n` +
+        `Livraison : ${zone || 'Non précisée'}`;
 
-                <select id="cust-pay" class="w-full border border-gray-200 px-3 py-2.5 text-xs bg-white focus:outline-none focus:border-[#e0218a]">
-                    <option value="Wave / Mobile Money">Dépôt Mobile Money (Wave)</option>
-                    
-                </select>
+      const phone = "2250575222642"; // Remplace par ton numéro complet avec 225, sans + ni espace
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
-                <button type="submit" class="w-full bg-[#e0218a] text-white py-4 text-xs font-bold tracking-widest uppercase hover:bg-black transition duration-300 mt-2">
-                    Confirmer & Commander sur WhatsApp
-                </button>
-            </form>
-        </div>
-    </div>
+      window.location.href = url;
+    }
 
-    <footer class="bg-white">
-        <div class="bg-[#e0218a] py-8 text-center">
-            <div class="flex justify-center items-center gap-3 flex-wrap px-4">
-                <span class="bg-[#0061ff] text-white text-[9px] font-extrabold px-3 py-1.5 rounded uppercase tracking-wider">Wave</span>
-                   </div>
-        </div>
-
-        <div class="py-12 text-center border-t border-gray-100">
-            <div class="flex justify-center space-x-8 text-xs text-gray-500 mb-6">
-                <a href="#" class="hover:text-black">Refund policy</a>
-                <a href="#" class="hover:text-black">Privacy policy</a>
-                <a href="#" class="hover:text-black">Terms of service</a>
-            </div>
-            <p class="text-[11px] text-gray-400 tracking-wider">&copy; 2025, WALLIPS GLAM CÔTE D'IVOIRE.</p>
-        </div>
-    </footer>
-
-    <script>
-        let cart = []; 
-
-        function toggleCart() {
-            document.getElementById('cart-sidebar').classList.toggle('translate-x-full');
-        }
-
-        // Ajouter un produit
-        function addToCart(productName, productPrice, productImage) {
-            const existingProduct = cart.find(item => item.name === productName);
-
-            if (existingProduct) {
-                existingProduct.quantity += 1;
-            } else {
-                cart.push({
-                    name: productName,
-                    price: productPrice,
-                    img: productImage,
-                    quantity: 1
-                });
-            }
-
-            updateCartUI();
-            // Ouvrir automatiquement le panier pour montrer le produit ajouté
-            document.getElementById('cart-sidebar').classList.remove('translate-x-full');
-        }
-
-        // Mettre à jour l'affichage du panier
-        function updateCartUI() {
-            const listContainer = document.getElementById('cart-items-list');
-            const totalContainer = document.getElementById('cart-total');
-            const cartCount = document.getElementById('cart-count');
-
-            let totalQuantity = 0;
-
-            if (cart.length === 0) {
-                listContainer.innerHTML = "Votre panier est vide.";
-                totalContainer.innerText = "0 FCFA";
-                cartCount.innerText = "0";
-                return;
-            }
-
-            let total = 0;
-            let htmlContent = '';
-
-            cart.forEach((item, index) => {
-                total += item.price * item.quantity;
-                totalQuantity += item.quantity;
-                htmlContent += `
-                    <div class="flex items-center justify-between border-b border-gray-100 pb-3">
-                        <div class="flex items-center space-x-3">
-                            <img src="${item.img}" class="w-12 h-12 object-cover bg-gray-50">
-                            <div>
-                                <h4 class="font-semibold text-gray-900">${item.name}</h4>
-                                <p class="text-[11px] text-[#e0218a] font-bold">${item.price.toLocaleString()} FCFA</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <button type="button" onclick="changeQuantity(${index}, -1)" class="border px-2 py-0.5 hover:bg-gray-100 text-xs font-bold">-</button>
-                            <span class="font-bold text-gray-950 text-xs">${item.quantity}</span>
-                            <button type="button" onclick="changeQuantity(${index}, 1)" class="border px-2 py-0.5 hover:bg-gray-100 text-xs font-bold">+</button>
-                        </div>
-                    </div>
-                `;
-            });
-
-            listContainer.innerHTML = htmlContent;
-            totalContainer.innerText = total.toLocaleString() + " FCFA";
-            cartCount.innerText = totalQuantity;
-        }
-
-        function changeQuantity(index, amount) {
-            cart[index].quantity += amount;
-            if (cart[index].quantity <= 0) {
-                cart.splice(index, 1);
-            }
-            updateCartUI();
-        }
-
-        // Valider la commande et l'envoyer par WhatsApp
-        function sendOrder(event) {
-            event.preventDefault();
-
-            if (cart.length === 0) {
-                alert("Votre panier est vide !");
-                return;
-            }
-
-            const name = document.getElementById('cust-name').value;
-            const location = document.getElementById('cust-location').value;
-            const date = document.getElementById('cust-date').value;
-            const time = document.getElementById('cust-time').value;
-            const paymentMethod = document.getElementById('cust-pay').value;
-
-            let message = `🛒 *Nouvelle commande - Wallips Glam*\n\n`;
-            message += `Bonjour, je souhaite commander les gloss suivants :\n\n`;
-            
-            let grandTotal = 0;
-
-            cart.forEach(item => {
-                message += `• *${item.name}* (x${item.quantity}) - ${(item.price * item.quantity).toLocaleString()} FCFA\n`;
-                grandTotal += item.price * item.quantity;
-            });
-
-            message += `\n💵 *Montant Total : ${grandTotal.toLocaleString()} FCFA*`;
-            message += `\n\n📌 *Détails pour la livraison :*`;
-            message += `\n- *Nom de la cliente :* ${name}`;
-            message += `\n- *Lieu de livraison :* ${location}`;
-            message += `\n- *Date de livraison :* ${date} à ${time}`;
-            message += `\n- *Mode de paiement choisi :* ${paymentMethod}`;
-
-            // !!! METTEZ VOTRE NUMÉRO SANS LE + ET SANS ESPACES ICI !!!
-            const myPhoneNumber = "2250575222642"; 
-
-            window.open(`https://wa.me/${myPhoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
-        }
-    </script>
-
+  </script>
 </body>
 </html>
